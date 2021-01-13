@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Members</title>  
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: black;
+    background-image: url(../img/wall.jpg);
+    background-size: cover;
+        }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: black;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+
+  .navbar {
+    margin-bottom: 0;
+    background-color:white !important;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #162252 !important;
+    font-style: bold;
+    
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color:white !important;
+    background-color:#104E8B !important;
+    animation: mymove 2s infinite;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  @keyframes mymove {
+  from {background-color: red;}
+  to {background-color: blue;}
+  ,from { background-color: blue; }
+  to {background-color: purple;}
+}
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color:black;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+
+
+.pic{
+  
+  transition: .5s ease;
+  backface-visibility: hidden;
+  opacity: 1;
+  max-height: auto;
+  }
+
+
+.identity{
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 8px 20px;
+  margin-top: -170%;
+  margin-left:58%;
+  width: 100%;
+
+}
+.container:hover .middle {
+  opacity: 1;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  margin-top: 10%;
+  bottom: auto;
+  margin-left: 6%;
+  margin-right: auto;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius:50px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0058B3; 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+.card {
+  max-width: 50%;
+  width: 22%;
+  text-align: center;
+  font-family: arial;
+  display: inline-block;
+  margin-top: 5%;
+  background-color: #BBFFFF;
+  margin-left: 5.5%;
+  margin-right: 5.5%;
+  padding-left: auto;
+}
+
+
+.submit {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 22px;
+}
+
+.title {
+  color: black;
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+
+</style>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: black">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../index.html#home"><img src="../img/eisla1.jpg"  style="height: 300%; margin-top: -20px; padding-top: 6px; padding-bottom: 6px; margin-left: -50px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../index.html#about">ABOUT</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="../index.html#googleMap">REACH US</a></li>
+        <li><a href="../index.html#contact">CONTACT</a></li>
+        <li><a href="locations.html">LOCATIONS</a></li>
+        <li><a href="team.html">MEMBERS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="jumbotron text-center">
+  <div class="title" ><h1 style="font-size: 48px;color: white; font-family: quicksand; padding-right: auto;padding-left: auto;">MEMBERS</h1><br></div>
+<div class="card">
+  <img src="../img/Ghanishth1.jpg" alt="Ghanishth Goyal" class="pic" style="width:100%; height: 40%">
+  <strong>Ghanishth Goyal</strong>
+  <p class="title"><strong>Digital Forensics (Trainee)</p><p><strong>Ex-Intern at MP Police Department</strong></p>
+  <div style="margin: 24px 0;">
+    <a href="https://www.linkedin.com/in/ghanishth-goyal"><i class="fa fa-linkedin"></i></a>  
+  </div>
+  <p><a class="submit" href="profile_ghanishth.html">Know More</a></p>
+</div>
+</div>
+</div>
+</body>
+</html>

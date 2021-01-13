@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EXTSLA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: white;
+    background-color: #BBFFFF;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color:#BBFFFF;
+    color: black;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+    background: linear-gradient(-45deg, #43cea2, #39b3a1, #2c909f, #23789e, #1d679d, #185b9d);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color:black;
+    font-size: 50px;
+  }
+  .logo {
+    color:black;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color:black;
+  }
+  .carousel-indicators li {
+    border-color:black;
+  }
+  .carousel-indicators li.active {
+    background-color:black;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solidblack; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solidblack;
+    background-color: #fff !important;
+    color:black;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color:black !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color:black;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color:white;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #162252 !important;
+    font-style: bold;
+    
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color:white !important;
+    background-color:#104E8B !important;
+    animation: mymove 2s infinite;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  @keyframes mymove {
+  from {background-color: red;}
+  to {background-color: blue;}
+  ,from { background-color: blue; }
+  to {background-color: purple;}
+}
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color:black;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+      background-color: lightgrey;
+
+    }
+
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  .title h1:hover{
+  background: transparent;
+  animation: mymove2 2s infinite;
+  color: red;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+.title h1:focus{
+  background: transparent;
+  animation: mymove2 2s infinite;
+  color: red;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+.title:active{
+  background-color: transparent;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  border: 2px solid #4CAF50;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+@keyframes mymove2 {
+  from {color: red;}
+  to {color: blue;color: #1f54ee}
+  }
+
+  .git{
+    color: black; 
+    background-color: grey; 
+    border: white 2px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .git:hover {
+    color: white; 
+    background-color: black; 
+    border: white 2px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+.scroller{
+  animation: mymove3 4s infinite;
+}
+@keyframes mymove3 {
+  from {opacity: 1}
+  to {opacity: 0}
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius:50px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0058B3; 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #3B8471 ;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    background: linear-gradient(-45deg, #185b9d, #1d679d, #23789e, #2c909f, #39b3a1, #43cea2);
+    opacity: 0.5;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 460px;
+  height: 496px;
+  text-align: center;
+  font-family: arial;
+  margin-left: 140px;
+  display: inline-block;
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+}
+
+
+.submit {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  color: white;
+  padding: 8px;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 22px;
+}
+
+
+.cd-container {
+  width: auto;
+  max-width: auto;
+  margin: 0 auto;
+  background: #2B343A;
+  padding: 0 10%;
+  border-radius: 2px;
+}
+.cd-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+#cd-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  height: 100%;
+  width: 4px;
+  background: #7E57C2;
+}
+@media only screen and (min-width: 1170px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cd-timeline-img {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #7E57C2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.cd-timeline-img {
+  background: #673AB7;
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 15px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  margin-right: 30px;
+  background: #333C42;
+  border-radius: 2px;
+  padding: 1em;
+  .timeline-content-info {
+    background: #2B343A;
+    padding: 5px 10px;
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    box-shadow:  inset 0 2px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    i {
+      margin-right: 5px;
+    }
+    .timeline-content-info-title, .timeline-content-info-date {  
+      width: calc(50% - 2px);
+      display: inline-block;
+    }
+    @media (max-width: 500px) {
+      .timeline-content-info-title, .timeline-content-info-date {  
+        display: block;
+        width:100%;
+      } 
+    }
+  }
+  .content-skills {
+    font-size: 12px;
+    padding:0;
+    margin-bottom: 0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      background: #40484D;
+      border-radius: 2px;
+      display: inline-block;
+      padding: 2px 10px;
+      color: rgba(255,255,255,0.7);
+      margin: 3px 2px;
+      text-align: center;
+      flex-grow: 1;
+    }
+  }
+}
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-timeline-content h2 {
+  color: rgba(255,255,255,.9);
+  margin-top:0;
+  margin-bottom: 5px;
+}
+.cd-timeline-content p, .cd-timeline-content .cd-date {
+  color: rgba(255,255,255,.7);
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+.cd-timeline-content .cd-date {
+  display: inline-block;
+}
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #333C42;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    color: white;
+    margin-left: 0;
+    padding: 1.6em;
+    width: 36%;
+    margin: 0 5%
+  }
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #333C42;
+  }
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 6px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #333C42;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+</style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#home"><img src="img/eisla1.jpg" style="height: 290%; margin-top: -20px; padding-top: 3px; padding-bottom: 3px; margin-left: -50px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="html/services.html">SERVICES</a></li>
+        <li><a href="#clients">CLIENTS</a></li>
+        <li><a href="#googleMap">REACH US</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="html/locations.html">LOCATIONS</a></li>
+        <li><a href="html/team.html">MEMBERS</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="home" class="jumbotron text-center" style="max-height: auto"><br><br>
+<div class="title" style="max-height: auto"><h1 style="font-size: 68px; padding-right: auto;padding-left: auto;color:white; font-family:  Cinzel">Extreme Insurance Surveyors</h1><br><h1 style="font-size: 68px; padding-right: auto;padding-left: auto;color:white;font-family:  Cinzel">&</h1><br><h1 style="font-size: 68px; padding-right: auto;padding-left: auto;color:white; font-family:  Cinzel">Loss Assessors</h1></div>
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+<br>
+  <br>
+  <br>
+  <a href="#about"><img class="scroller" src="img/scroller.png" style="height: 60px;color:#104E8B"></a>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid" style="background-image: url(img/team.jpg);background-size: cover;background-blend-mode: color;">
+  <div class="row">
+    <div class="col-sm-8">
+        <br><br>
+      <h2 style="color: white;">About Extreme Insurance Surveyors & Loss Assessors</h2><br>
+      <h4 style="color: white"><p style="max-width: 80%">Our journey started on 01st April 2020 when Mr Shailender Kumar Gupta decided to accelerate his 32+ years’ experience of Insurance industry as an independent Surveyor & Loss Assessor to newer height and registered “Extreme Insurance Surveyors & Loss Assessors” under MSME as a Proprietary firm to give back the experience and knowledge gained by him in the industry during his lifelong independent career.</p>
+      <br><a class="git" href="https://wa.me/message/4SKUEJML7ISNN1"> Get in Touch</a>
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class="container-fluid bg-teal">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim" style="padding-top: 30%; padding-left: 50px"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2 style="color: black">Our Values</h2><br>
+      <h4><strong>MISSION:</strong> We are a team of Risk Management professionals with strong technical background, problem solvers, and strategists with an extensive track record of building & aligning organizations to achieve excellence, profitability, and unparalleled client service with an impeccable expertise in doing business with PSU Gen. Insurers, Private Gen Insurers, Corporate and SMEs.<br><br>
+We are skilled relationship builder & industry trusted adviser ensured both horizontal & vertical growth in large accounts. Pivotal resource on business expansions, turnarounds, cross functional executions.<br><br>
+TAT, Quality & Commitment are the major objectives when taking an assignment.</h4><br>
+    </div>
+  </div>
+</div>
+
+
+<!--Container (Portfolio Section)-->
+<div id="clients" class="container-fluid text-center bg-grey" style="background: white; height: 450px">
+  
+  
+  <h2 style="color: black">Clients</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel"  data-interval='1000'>
+    <!--Indicators -->
+    <ol class="carousel-indicators" style="visibility: hidden;" >
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+      <li data-target="#myCarousel" data-slide-to="7"></li>
+      <li data-target="#myCarousel" data-slide-to="8"></li>
+      <li data-target="#myCarousel" data-slide-to="9"></li>
+      <li data-target="#myCarousel" data-slide-to="10"></li>
+      <li data-target="#myCarousel" data-slide-to="11"></li>
+      <li data-target="#myCarousel" data-slide-to="12"></li>
+      <li data-target="#myCarousel" data-slide-to="13"></li>
+      <li data-target="#myCarousel" data-slide-to="14"></li>
+      <li data-target="#myCarousel" data-slide-to="15"></li>
+      <li data-target="#myCarousel" data-slide-to="16"></li>
+      <li data-target="#myCarousel" data-slide-to="17"></li>
+      <li data-target="#myCarousel" data-slide-to="18"></li>
+      <li data-target="#myCarousel" data-slide-to="19"></li>
+      <li data-target="#myCarousel" data-slide-to="20"></li>
+      <li data-target="#myCarousel" data-slide-to="21"></li>
+      <li data-target="#myCarousel" data-slide-to="22"></li>
+      <li data-target="#myCarousel" data-slide-to="23"></li>
+      <li data-target="#myCarousel" data-slide-to="24"></li>
+      <li data-target="#myCarousel" data-slide-to="25"></li>
+      <li data-target="#myCarousel" data-slide-to="26"></li>
+      <li data-target="#myCarousel" data-slide-to="27"></li>
+      <li data-target="#myCarousel" data-slide-to="28"></li>
+      <li data-target="#myCarousel" data-slide-to="29"></li>
+      <li data-target="#myCarousel" data-slide-to="30"></li>
+      <li data-target="#myCarousel" data-slide-to="31"></li>
+      <li data-target="#myCarousel" data-slide-to="32"></li>
+      <li data-target="#myCarousel" data-slide-to="33"></li>
+      <li data-target="#myCarousel" data-slide-to="34"></li>
+      <li data-target="#myCarousel" data-slide-to="35"></li>
+      <li data-target="#myCarousel" data-slide-to="36"></li>
+      <li data-target="#myCarousel" data-slide-to="37"></li>
+      <li data-target="#myCarousel" data-slide-to="38"></li>
+    </ol>
+
+    <!--Wrapper for slides-->
+     <div class="carousel-inner" role="listbox">
+      <div class="item active">
+       <span><img src="logo/new_india.jpg" style="width: auto;height: 125px;"></span>
+       <h4><span>The New India Assurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/airtel.svg" style="width: auto;height: 125px;"></span>
+       <h4><span>Airtel</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/chola.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Cholamandalam MS General Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/fglogo.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Future Generali India Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/hdfc ergo.png" style="width: auto;height: 125px;"></span>
+       <h4><span>HDFC ERGO General Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/icici.jpg" style="width: auto;height: 125px;"></span>
+       <h4><span>ICICI LOMBARD General Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/iffco.svg" style="width: auto;height: 125px;"></span>
+       <h4><span>IFFCO TOKIO General Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/national.jpg" style="width: auto;height: 125px;"></span>
+       <h4><span>National Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/reliance.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Reliance General Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/royal.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Royal Sundaram General Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/sbi.svg" style="width: auto;height: 125px;"></span>
+       <h4><span>SBI General Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/tata_aig.png" style="width: auto;height: 125px;"></span>
+       <h4><span>TATA AIG General Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/oriental.png" style="width: auto;height: 125px;"><span>
+       <h4><span>The Oriental Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/united.png" style="width: auto;height: 125px;"></span>
+       <h4><span>United India Insurance Co. Ltd.</span></h4>
+       </div>
+      <div class="item">
+       <span><img src="logo/tvs.png" style="width: auto;height: 125px;"></span>
+       <h4><span>TVS</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/universal.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Universal Sompo General Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/yamaha.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Yamaha</span></h4>
+       </div>
+      <div class="item">
+       <span><img src="logo/emami.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Emami Limited</span></h4>
+       </div>
+      <div class="item">
+       <span><img src="logo/marvel.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Marvel</span></h4>
+       </div>
+      <div class="item">
+       <span><img src="logo/piind.png" style="width: auto;height: 125px;"></span>
+       <h4><span>PI Industries Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/hyundai.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Hyundai</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/lg.jpg" style="width: auto;height: 125px;"></span>
+       <h4><span>LG Electronics</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/honda.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Honda</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/canara.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Canara Bank</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/anand.png" style="filter: invert(1); width: auto; height: 125px;"></span>
+       <h4><span>Anand Group of Industries</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/mcd.svg" style="width: auto;height: 125px;"></span>
+       <h4><span>McDonalds</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/haldiram.svg" style="width: auto;height: 125px;"></span>
+       <h4><span>Haldiram's</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/dlf.png" style="width: auto;height: 125px;"></span>
+       <h4><span>DLF India</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/indus.svg" style="width: auto;height: 125px;"></span>
+       <h4><span>Indus Towers</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/landt.jpg" style="width: auto;height: 125px;"></span>
+       <h4><span>Larsen and Toubo</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/united.png" style="width: auto;height: 125px;"></span>
+       <h4><span>United India Insurance Co. Ltd.</span></h4>
+       </div>
+     <div class="item">
+       <span><img src="logo/universal.png" style="width: auto;height: 125px;"></span>
+       <h4><span>Universal Sompo General Insurance Co. Ltd.</span></h4>
+       </div></span></div>
+
+    <!--Left and right controls-->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="visibility: hidden;">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="visibility: hidden;">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<!-- Container (Google MAP) -->
+
+<!--<div id="googleMap" style="width:100%;height:400px;"></div>-->
+<iframe id="googleMap" style="width:100%;height:400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.640834800789!2d77.12436571495486!3d28.730277882379358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0153f42ce9fb%3A0x581cc1fbce99034f!2sExtreme%20Insurance%20Surveyors%20%26%20Loss%20Assessors!5e0!3m2!1sen!2sin!4v1606379281377!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<!--<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey" style="background-image: url(img/wallpaper.jpg); background-size: cover;">
+  <h2 class="text-center" style="font-style: sans-serif;">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> G-17/27 Sector 15, Rohini, Delhi 110089 (India)</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 7678505473</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> extsla@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <form action="mailto: extsla@gmail.com" method="post" enctype="text/plain">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="Name" name="Name" placeholder="Name" type="text" style="width: 100%; height: auto; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border: 2px solid black;color: white; background-color: #111111; opacity: 0.8; border-radius: 4px;" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="Email" name="Email" placeholder="Email" type="email" style="width: 100%; height: auto; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border: 2px solid black;color: white; background-color: #111111; opacity: 0.8; border-radius: 4px;"  required>
+        </div>
+      </div>
+      <textarea class="form-control" id="Suggestion/Query" name="Suggestion/Query" placeholder="Suggestion/Query" style="width: 100%; height: auto; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border: 2px solid black;color: white; background-color: #111111; opacity: 0.8; border-radius: 4px;"  rows="5" required></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit" value="Send">Send</button>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--<div id="jumbotron text-center" style="height: 200%">
+  <div id="mentor" class="title" ><h1 style="font-size: 48px;color: black; font-family: quicksand; padding-right: auto;padding-left: auto; text-align: center;">MENTORS</h1><br><p style="text-align: center;color: black; font-family: quicksand; font-size: 28px;">The great minds which convert this idea in reality.</p></div>
+
+<div class="card">
+  <img src="dgp.jpeg" style="height: 57%;width: 280px" alt="Maithili S. Gupta" style="width:100%">
+  <h1>Maithili S. Gupta</h1>
+  <p class="title">Spl. DGP Police Reforms</p>
+  <p>Madhya Pradesh</p>
+  <div style="margin: 24px 0;">
+    <a href="https://www.linkedin.com/in/maithili-gupta-aa81143a/"><i class="fa fa-linkedin"></i></a>  
+  </div>
+  <p><a class="submit" href="mailto: maithilisharan@gmail.com">Contact</a></p>
+</div>
+<div class="card">
+  <img src="0.jpg" alt="Shishir Shandilya" style="width:100%">
+  <h1>Shishir Shandilya</h1>
+  <p class="title">Dept. Head, CSDF</p>
+  <p>VIT Bhopal, University</p>
+  <div style="margin: 24px 0;">
+    <a href="https://www.linkedin.com/in/dr-shishir-k-shandilya-208a7511/"><i class="fa fa-linkedin"></i></a>   
+  </div>
+  <p><a class="submit" href="mailto: shishirkumar.s@vitbhopal.ac.in">Contact</a></p>
+</div>
+<div class="card">
+  <img src="1.jpg" alt="Praveen Lalwani" style="width:280px">
+  <h1>Praveen Lalwani</h1>
+  <p class="title">Project Head, Professor</p>
+  <p>VIT Bhopal, University</p>
+  <div style="margin: 24px 0;">
+    <a href="https://www.linkedin.com/in/praveen-lalwani-510b29a8/"><i class="fa fa-linkedin"></i></a>
+  </div>
+  <p><a class="submit" href="mailto: praveen.lalwani@vitbhopal.ac.in">Contact</a></p>
+  </div>
+</div>
+-->
+
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p style="color: black; font-style: bold"><img src="img/copy.png" style="height: 25px;"> Copyright Extreme Insurance Surveyors & Loss Assessors 2020</p>
+</footer>
+
+<script>
+
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+
+function resize() {
+    var box = c.getBoundingClientRect();
+    c.width = box.width;
+    c.height = box.height;
+}
+
+var light = {
+    x: 160,
+    y: 200
+}
+
+var colors = ["#f5c156", "#e6616b", "#5cd3ad"];
+
+function drawLight() {
+    ctx.beginPath();
+    ctx.arc(light.x, light.y, 1000, 0, 2 * Math.PI);
+    var gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 1000);
+    gradient.addColorStop(0, "#3b4654");
+    gradient.addColorStop(1, "#2c343f");
+    ctx.fillStyle = gradient;
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(light.x, light.y, 20, 0, 2 * Math.PI);
+    gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 5);
+    gradient.addColorStop(0, "#fff");
+    gradient.addColorStop(1, "#3b4654");
+    ctx.fillStyle = gradient;
+    ctx.fill();
+}
+
+function Box() {
+    this.half_size = Math.floor((Math.random() * 50) + 1);
+    this.x = Math.floor((Math.random() * c.width) + 1);
+    this.y = Math.floor((Math.random() * c.height) + 1);
+    this.r = Math.random() * Math.PI;
+    this.shadow_length = 2000;
+    this.color = colors[Math.floor((Math.random() * colors.length))];
+  
+    this.getDots = function() {
+
+        var full = (Math.PI * 2) / 4;
+
+
+        var p1 = {
+            x: this.x + this.half_size * Math.sin(this.r),
+            y: this.y + this.half_size * Math.cos(this.r)
+        };
+        var p2 = {
+            x: this.x + this.half_size * Math.sin(this.r + full),
+            y: this.y + this.half_size * Math.cos(this.r + full)
+        };
+        var p3 = {
+            x: this.x + this.half_size * Math.sin(this.r + full * 2),
+            y: this.y + this.half_size * Math.cos(this.r + full * 2)
+        };
+        var p4 = {
+            x: this.x + this.half_size * Math.sin(this.r + full * 3),
+            y: this.y + this.half_size * Math.cos(this.r + full * 3)
+        };
+
+        return {
+            p1: p1,
+            p2: p2,
+            p3: p3,
+            p4: p4
+        };
+    }
+    this.rotate = function() {
+        var speed = (60 - this.half_size) / 20;
+        this.r += speed * 0.002;
+        this.x += speed;
+        this.y += speed;
+    }
+    this.draw = function() {
+        var dots = this.getDots();
+        ctx.beginPath();
+        ctx.moveTo(dots.p1.x, dots.p1.y);
+        ctx.lineTo(dots.p2.x, dots.p2.y);
+        ctx.lineTo(dots.p3.x, dots.p3.y);
+        ctx.lineTo(dots.p4.x, dots.p4.y);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+
+
+        if (this.y - this.half_size > c.height) {
+            this.y -= c.height + 100;
+        }
+        if (this.x - this.half_size > c.width) {
+            this.x -= c.width + 100;
+        }
+    }
+    this.drawShadow = function() {
+        var dots = this.getDots();
+        var angles = [];
+        var points = [];
+
+        for (dot in dots) {
+            var angle = Math.atan2(light.y - dots[dot].y, light.x - dots[dot].x);
+            var endX = dots[dot].x + this.shadow_length * Math.sin(-angle - Math.PI / 2);
+            var endY = dots[dot].y + this.shadow_length * Math.cos(-angle - Math.PI / 2);
+            angles.push(angle);
+            points.push({
+                endX: endX,
+                endY: endY,
+                startX: dots[dot].x,
+                startY: dots[dot].y
+            });
+        };
+
+        for (var i = points.length - 1; i >= 0; i--) {
+            var n = i == 3 ? 0 : i + 1;
+            ctx.beginPath();
+            ctx.moveTo(points[i].startX, points[i].startY);
+            ctx.lineTo(points[n].startX, points[n].startY);
+            ctx.lineTo(points[n].endX, points[n].endY);
+            ctx.lineTo(points[i].endX, points[i].endY);
+            ctx.fillStyle = "#2c343f";
+            ctx.fill();
+        };
+    }
+}
+
+var boxes = [];
+
+function draw() {
+    ctx.clearRect(0, 0, c.width, c.height);
+    drawLight();
+
+    for (var i = 0; i < boxes.length; i++) {
+        boxes[i].rotate();
+        boxes[i].drawShadow();
+    };
+    for (var i = 0; i < boxes.length; i++) {
+        collisionDetection(i)
+        boxes[i].draw();
+    };
+    requestAnimationFrame(draw);
+}
+
+resize();
+draw();
+
+while (boxes.length < 14) {
+    boxes.push(new Box());
+}
+
+window.onresize = resize;
+c.onmousemove = function(e) {
+    light.x = e.offsetX == undefined ? e.layerX : e.offsetX;
+    light.y = e.offsetY == undefined ? e.layerY : e.offsetY;
+}
+
+
+function collisionDetection(b){
+  for (var i = boxes.length - 1; i >= 0; i--) {
+    if(i != b){ 
+      var dx = (boxes[b].x + boxes[b].half_size) - (boxes[i].x + boxes[i].half_size);
+      var dy = (boxes[b].y + boxes[b].half_size) - (boxes[i].y + boxes[i].half_size);
+      var d = Math.sqrt(dx * dx + dy * dy);
+      if (d < boxes[b].half_size + boxes[i].half_size) {
+          boxes[b].half_size = boxes[b].half_size > 1 ? boxes[b].half_size-=1 : 1;
+          boxes[i].half_size = boxes[i].half_size > 1 ? boxes[i].half_size-=1 : 1;
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
