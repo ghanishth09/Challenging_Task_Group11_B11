@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv = "refresh" content = "5; url = ../index.html" />
+	<title>User Registration</title>
+	</head>	
+	<style type="text/css">
+		#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+@keyframes mymove {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
+.content {
+  position: absolute;
+  bottom: 0;
+  background: red;
+  animation: mymove 5s infinite; 
+  color: #f1f1f1;
+  width: 102%;
+  background-size: cover;
+  height: 100%;
+  opacity: 0.65;
+  margin-left: -2%;
+  margin-right: -10%;
+}
+.change {
+width:30px;
+height:auto;
+color:white;
+font-size:20px;
+border-radius: 6px;
+cursor: pointer;
+
+}
+.change:hover{
+  color: black;
+  animation-name: 
+  border: 2px darkgreen;
+}
+	</style>
+	<body>
+		<video autoplay muted loop id="myVideo">
+  <source src="background.mp4" type="video/mp4">
+</video>
+			<div class="content">
+			<h1 align="center" style="font-family: Quicksand; font-size: 30px; margin-top: 20%" >Thank you for visiting us</h1>
+			<h2 align="center" style="font-family: Quicksand" >For Login again, press <a href="../login.html" class="change">here</a></h2>
+			</div>
+</body>
+</html>
