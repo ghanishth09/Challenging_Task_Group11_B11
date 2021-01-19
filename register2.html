@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Careers</title>
+	</head>	
+	<style type="text/css">
+		
+body{
+	background-image: url('img/wall.jpg');
+	background-size: cover;text-align: left; 
+	color: white;
+	font-family: Quicksand;
+	}
+	div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 45%;
+  float: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+  color: black;
+}
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+input[type=text]:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=text]:focus{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+
+input[type=email] {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: lightgrey;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+input[type=email]:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=email]:focus{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=number] {
+  width: 8.5%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+input[type=number]:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=number]:focus{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=tel] {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+input[type=tel]:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=tel]:focus{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=password] {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #D3D3D3;
+  outline: none;
+}
+input[type=password]:hover{
+	background-color: black;
+	color: white;
+}
+
+input[type=date] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: #D3D3D3;
+  box-sizing: border-box;
+  border: 2px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+input[type=date]:hover{
+	background-color: black;
+	color: white;
+}
+input[type=date]:focus{
+	background-color: black;
+	color: white;
+}
+input[type=password]:focus{
+	background-color: black;
+	color: white; 
+	}
+}
+input[type=email]:focus{
+	background-color: black;
+	color: white;
+}
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius:50px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0058B3; 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+.dropbtn{
+  background-color: white;
+  color: #4CAF50; padding: 14px 20px;
+  margin: 8px 0;
+  border: 3px solid; 
+  cursor: pointer; 
+  width: 30%;
+  border-radius: 8px; 
+  border-color: darkgreen; 
+  transition-duration: 0.4s;
+  cursor: pointer;}
+  .dropbtn:hover{
+	background-color: black;
+  color: white;
+  border-color: darkgreen;
+  animation-name: 
+  border: 2px solid #4CAF50;
+  }
+  .dropbtn:focus{
+	background-color: black;
+  color: white;
+  border-color: black;
+  animation-name: 
+  border: 2px solid #4CAF50;
+  }
+.button{
+  background-color: #4CAF50;
+  color: white; padding: 14px 20px;
+  margin: 8px 0;
+  border: none; 
+  cursor: pointer; 
+  width: 100%;
+  border-radius: 8px; 
+  border-color: darkgreen; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
+  
+  .button1:hover{
+  background-color: white;
+  color: #4CAF50; 
+  border: 3px solid #4CAF50;
+}
+.button:active{
+	background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  border: 2px solid #4CAF50;
+}
+
+
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a green background */
+.container input:checked ~ .checkmark {
+  background-color: green;
+}
+
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+select{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: black;
+  color: white;
+  opacity: 1;
+  box-sizing: border-box;
+  border: 3px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+select:hover{
+	background-color: black;
+	color: white;
+}
+.change {
+width:30px;
+height:auto;
+color:black;
+font-size:20px;
+border-radius: 6px;
+cursor: pointer;
+font-weight:700
+}
+.change:hover{
+  color: #4CAF50;
+  animation-name: 
+  border: 2px darkgreen;
+}
+.condition {
+width:30px;
+height:auto;
+color:black;
+font-size:20px;
+border-radius: 6px;
+cursor: pointer;
+font-weight:700;
+text-decoration-line: none;
+}
+.condition:hover{
+  color: #4CAF50;
+  animation-name: 
+  border: 2px darkgreen;
+  text-decoration-line: none;
+}
+	</style>
+	<body>
+<strong><a style="float: right; width: 70px; border: 2px solid black;border-radius: 36px; background-color: skyblue; padding: 16px;color: black; word-break: keep-all; text-decoration-line: none;" href="html/logout.php">Sign Out</a></strong>
+		<header><h1 align="center" style="font-family: Quicksand">Call Out - We are hiring!</h1></header><hr>
+    <p style="width: 80%;margin-left: 10%;margin-right: 10%">If you are good in inspections & investigations with all the required skills and qualifications, you are at right place. We are looking for Non-Motor Freelance independent licensed surveyors in departments Fire, Engineering, Marine cargo, Miscellaneous at PAN India locations. <br><br>
+
+Essential qualifications required - 
+<ol style="width: 80%;margin-left: 10%;margin-right: 10%">
+<li> IRDAI License in Non-Motor departments</li>
+<li> Associate in Insurance Institute of India (AIII)</li>
+<li> Chartered Accountant/ ICWA OR Mech./ Elec. Engineer</li>
+<li> Experience in Non-Motor Claims</li></ol></p>
+<br><br>
+		<div>
+		<fieldset>
+		<form action="career.php" method="post" enctype="multipart/form-data">
+      <b><label for="first_name" style="font-family: Quicksand">First Name:</label></b>
+      <input type="text" name="first_name" placeholder="First Name" required autofocus>
+      <b><label for="last_name" style="font-family: Quicksand">Last Name:</label></b>
+      <input type="text" name="last_name" placeholder="Last Name" required><br><br>
+      <b><label for="email" autocomplete="off" style="font-family: Quicksand; width: 100%;">Email ID:</label></b><br>
+      <input type="email" name="email" style=" width: 100%" placeholder="Email - ID" required><br>
+      <b><label for="phone_no" style="font-family: Quicksand;" >Mobile No.:</label></b><br>
+      <input type="tel" name="phone_no" align="center" placeholder="Mobile No." style=" width: 100%" maxlength="10" pattern="^\d{10}$" required><br><br>
+      <b><label for="address" style="font-family: Quicksand">Location to work:</label></b>
+      <input type="text" name="address" placeholder="Location to work" required><br><br>
+      <b><label for="experience" style="font-family: Quicksand">Experience(in months):</label></b>
+      <input type="number" name="experience" placeholder="Experience(in months)" style=";width: 200px;" required><br><br>
+      <b><label for="resume" style="font-family: Quicksand;">Select file to upload:</label></b><br>
+      <input type="file" name="fileToUpload" id="fileToUpload" required>
+      <input type="submit" value="Upload" class="button button1" formaction="career.php"><br><br>
+</form>
+		</div>
+
+    <script type="text/javascript">
+      function myfunction()
+      {
+            alert("Your Resume have been uploaded");
+      }
+    </script>
+	</body>	
+	</html>

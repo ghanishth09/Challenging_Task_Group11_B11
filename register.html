@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Signup</title>
+	</head>	
+	<style type="text/css">
+		
+body{
+	background: #ffffff url('extsla/img/clouds.jpg');
+  text-align: left; 
+	color: black;
+	font-family: Quicksand;
+	}
+	div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 45%;
+  float: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+}
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+input[type=text]:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=text]:focus{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+
+input[type=email] {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: lightgrey;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+input[type=email]:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=email]:focus{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=number] {
+  width: 8.5%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+input[type=number]:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=number]:focus{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=tel] {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  background-color: lightgrey;
+  border-radius: 4px;
+}
+input[type=tel]:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=tel]:focus{
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+input[type=password] {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #D3D3D3;
+  outline: none;
+}
+input[type=password]:hover{
+	background-color: black;
+	color: white;
+}
+
+input[type=date] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: #D3D3D3;
+  box-sizing: border-box;
+  border: 2px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+input[type=date]:hover{
+	background-color: black;
+	color: white;
+}
+input[type=date]:focus{
+	background-color: black;
+	color: white;
+}
+input[type=password]:focus{
+	background-color: black;
+	color: white; 
+	}
+}
+input[type=email]:focus{
+	background-color: black;
+	color: white;
+}
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius:50px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0058B3; 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+.dropbtn{
+  background-color: white;
+  color: #4CAF50; padding: 14px 20px;
+  margin: 8px 0;
+  border: 3px solid; 
+  cursor: pointer; 
+  width: 30%;
+  border-radius: 8px; 
+  border-color: darkgreen; 
+  transition-duration: 0.4s;
+  cursor: pointer;}
+  .dropbtn:hover{
+	background-color: black;
+  color: white;
+  border-color: darkgreen;
+  animation-name: 
+  border: 2px solid #4CAF50;
+  }
+  .dropbtn:focus{
+	background-color: black;
+  color: white;
+  border-color: black;
+  animation-name: 
+  border: 2px solid #4CAF50;
+  }
+.button{
+  background-color: #4CAF50;
+  color: white; padding: 14px 20px;
+  margin: 8px 0;
+  border: none; 
+  cursor: pointer; 
+  width: 100%;
+  border-radius: 8px; 
+  border-color: darkgreen; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
+  
+  .button1:hover{
+  background-color: white;
+  color: #4CAF50; 
+  border: 3px solid #4CAF50;
+}
+.button:active{
+	background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  border: 2px solid #4CAF50;
+}
+
+
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a green background */
+.container input:checked ~ .checkmark {
+  background-color: green;
+}
+
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+select{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: black;
+  color: white;
+  opacity: 1;
+  box-sizing: border-box;
+  border: 3px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+select:hover{
+	background-color: black;
+	color: white;
+}
+.change {
+width:30px;
+height:auto;
+color:black;
+font-size:20px;
+border-radius: 6px;
+cursor: pointer;
+font-weight:700
+}
+.change:hover{
+  color: #4CAF50;
+  animation-name: 
+  border: 2px darkgreen;
+}
+.condition {
+width:30px;
+height:auto;
+color:black;
+font-size:20px;
+border-radius: 6px;
+cursor: pointer;
+font-weight:700
+}
+.condition:hover{
+  color: #4CAF50;
+  animation-name: 
+  border: 2px darkgreen;
+}
+
+
+	</style>
+	<body>
+<script type="text/javascript">
+    function confirmPass() {
+        var pass = document.getElementById("pass").value
+        var confPass = document.getElementById("c_pass").value
+        if(pass != confPass) {
+            alert('Wrong confirm password !');
+        }
+    }
+</script>
+		<header><h1 align="center" style="font-family: Quicksand">Signup</h1></header><hr>
+		<div>
+		<fieldset>
+		<form name="myForm" autocomplete="off" method="post" action="registration.php">
+			<b><label for="first_name" style="font-family: Quicksand">First Name:</label></b>
+			<input type="text" name="first_name" placeholder="First Name" required autofocus>
+			<b><label for="last_name" style="font-family: Quicksand">Last Name:</label></b>
+			<input type="text" name="last_name" placeholder="Last Name" required><br><br>
+			<b><label for="email" autocomplete="off" style="font-family: Quicksand; width: 100%;">Email ID:</label></b><br>
+			<input type="email" name="email" style=" width: 100%" placeholder="Email - ID" required><br>
+			<b><label for="phone_no" style="font-family: Quicksand;" >Mobile No.:</label></b><br>
+			<input type="tel" name="phone_no" align="center" placeholder="Mobile No." style=" width: 100%" maxlength="10" pattern="^\d{10}$" required><br><br>
+      <b><label for="pass" style="font-family: Quicksand;width: 100%">Enter Password:</label></b><br>
+      <input type="password" name="pass" style=" width: 100%" placeholder="Password" minlength="9" maxlength="15" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 9 or max 15" required><br>
+      <b><label for="c_pass" style="font-family: Quicksand;">Confirm Password:</label></b><br>
+      <input type="password" style=" width: 100%" name="confirm_password" placeholder="Confirm Password" id="c_pass" name="your_c_pass" onblur="confirmPass()" title="Enter same Password" required><br><br>
+			<b><label for="birthdate" style="font-family: Quicksand">Date of Birth:</label></b><br>
+			<input type="date" name="birthdate" max="2002-05-31" style="width: 100%" autocomplete><br><br>
+			<b><label for="gender" style="font-family: Quicksand">Select Gender</label></b><br>
+			<label class="container">Male
+  			  <input type="radio" checked="checked" name="radio" value="Male">
+  			  <span class="checkmark"></span>
+			</label>
+			<label class="container">Female
+			  <input type="radio" name="radio" value="Female">
+			  <span class="checkmark"></span>
+			</label>
+			<label class="container">Others
+  			  <input type="radio" name="radio" value="Others">
+	  		  <span class="checkmark"></span>
+			</label><br>
+			<input type="checkbox" name="t&c" required> Click, to confirm the <a href="#" class="condition"> Terms and Condition</a><br>
+      Already have an account<a href="login.html" class="condition"> Login </a><br>
+			<input type="submit" value="Register" class="button button1" action="registration.php"><br><br>
+			
+		</form>
+		</fieldset>
+		</div>
+
+    
+
+  <script>
+var myInput = document.getElementById("pass");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+
+	</body>	
+	</html>

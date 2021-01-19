@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>User Login</title>
+	</head>	
+	<style type="text/css">
+		
+body{
+	background-image: url('EXTSLA/img/clouds.jpg');
+	background-size: cover;text-align: left; 
+	color: black;
+  font-family: Quicksand;
+	}
+	div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  float: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60%;
+}
+.condition {
+width:30px;
+height:auto;
+color:black;
+font-size:20px;
+border-radius: 6px;
+cursor: pointer;
+font-weight:700;
+text-decoration-line: none;
+}
+.condition:hover{
+  color: #4CAF50;
+  animation-name: 
+  border: 2px darkgreen;
+  text-decoration-line: none;
+}
+	input[type=text] {
+  width: 25%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid green;
+  background-color: light green;
+  opacity: 0.7;
+  border-radius: 4px;
+}
+input[type=text]:hover{
+  background-color: white;
+  color: green;
+  border: 2px solid green;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: lightgrey;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+input[type=email]:hover{
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+input[type=email]:focus{
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+}
+input[type=tel] {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid green;
+  background-color: light green;
+  opacity: 0.7;
+  border-radius: 4px;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: lightgrey;
+  outline: none;
+}
+input[type=password]:hover{
+  background-color: black;
+  color: white;
+}
+input[type=password]:focus{
+  background-color: black;
+  color: white;
+}
+input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  background-color: white;
+  opacity: 0.7;
+  box-sizing: border-box;
+  border: 3px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.button{
+  background-color: #4CAF50;
+  color: white; padding: 14px 20px;
+  margin: 8px 0;
+  border: none; 
+  cursor: pointer; 
+  width: 100%;
+  border-radius: 8px; 
+  border-color: red; 
+  transition-duration: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);}
+
+  .button1:hover{
+  background-color: white;
+  color: #4CAF50; 
+  border: 2px solid #4CAF50;
+}
+.button:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  border: 2px solid #4CAF50;
+}
+.change {
+width:30px;
+height:auto;
+color:black;
+font-size:20px;
+border-radius: 6px;
+cursor: pointer;
+font-weight:700;
+}
+.change:hover{
+  color: #4CAF50;
+  animation-name: 
+  border: 2px darkgreen;
+}
+  /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius:50px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0058B3; 
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+.leave {
+width:30px;
+height:auto;
+color:black;
+font-size:15px;
+border-radius: 6px;
+cursor: pointer;
+font-weight:700
+}
+.leave:hover{
+  color: #4CAF50;
+  animation-name: 
+  border: 2px darkgreen;
+}
+	</style>
+	<body>
+<script type="text/javascript"> 
+        window.history.forward(); 
+        function noBack() { 
+            window.history.forward(); 
+        } 
+    </script> 
+		<header><h1 align="center" style="font-family: Quicksand" onsubmit="myfunction()">Login to your Account</h1></header><hr>
+		<div>
+		<fieldset>
+		<form autocomplete="off" method="post" action="validation.php">
+			<b><label for="email" style="font-family: Quicksand;">Email ID:</label></b><br>
+			<input type="email" name="email" placeholder="Email - ID" required><br><br>
+			<b><label for="password" style="font-family: Quicksand">Enter Password:</label></b><br>
+			<input type="password" name="pass" placeholder="Password" required><br><br>
+			<input type="submit" value="Login" class="button button1" action="validation.php" ><br><br>
+			Don't have an account<a href="register.html" class="condition"> Sign Up </a><br>
+		</form>
+		</fieldset>
+		</div>
+	</body>	
+	</html>
